@@ -1,0 +1,46 @@
+const {Client, RichEmbed} = require('discord.js');
+const bot = new Discord.Client();
+const Discord = require('discord.js');
+var version = '1.0.1';
+
+const token = 'NzA1Nzk4ODM2Njk3Njk0MjE5.Xq7-0w.ROwz8PsYdxICb2atRxDtrFFoPJg';
+ 
+var prefix = '!';
+const embed = new Discord.RichEmbed()
+
+ 
+ 
+bot.on('ready', () => {
+    console.log('This bot is active!');
+})
+ 
+bot.on('message', message => {
+    let args = message.content.substring(prefix.length).split(" ");
+   
+ 
+    switch (args[0]) {
+        
+        case 'ping':
+            addField('Ember Design Bot', message.author.username);
+             message.channel.sendeEmbed(embed)
+           message.channel.sendMessage('pong')
+        break;
+        case 'help'
+            :message.channel.sendMessage('List of commands: !pricing tells you the price of all the projects that Ember can do. This includes thumbnails and all work. !help gives list of commands. !test makes the bot ping to make sure that it is working properly. !emberdesign gives you the list of things you need for gfx projects and sends them directly to Ember')
+            break; 
+        case 'test'
+            :message.channel.sendMessage('This bot is working properly')
+             break;
+        case 'pricing'
+            :message.channel.sendMessage('Thumbnail: $4 Channel Art/Banner: $5 PFP or Logo: $3. Anything else that is not on the list, please contact Ember for more information ');
+            break;
+        case 'emberdesign'
+            :message.channel.sendMessage('What Is your project?(thumbnail, banner, ect) ')
+    
+ 
+ 
+}})
+ 
+           
+                       
+bot.login(token);
