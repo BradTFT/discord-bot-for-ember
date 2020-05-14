@@ -3,7 +3,7 @@ const bot = new Discord.Client();
 const Discord = require('discord.js');
 var version = '1.0.1';
 
-const token = 'NzA1Nzk4ODM2Njk3Njk0MjE5.Xq7-0w.ROwz8PsYdxICb2atRxDtrFFoPJg';
+const token = 'datoken';
  
 var prefix = '!';
 const embed = new Discord.RichEmbed()
